@@ -3,8 +3,7 @@ CRUD App Final: CUNYFirst Clone
 Server codebase provided by Professor Lynch
 Practical Web Dev '22
 
-## Start
-To run the application locally:
+To run the app:
 
 ```
 cd crudapp-cunfirst 
