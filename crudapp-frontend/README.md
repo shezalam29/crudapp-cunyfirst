@@ -7,13 +7,7 @@ Sources:
 https://github.com/mtlynch3/CSCI39548
 https://github.com/mtlynch3/final-frontend
 
-
-To run the app without a database connection:
-
-```
-cd crudapp-frontend  
-npm install        
-npm start       
+    
 As a user I:
 [x] will land on a visually pleasing homepage by default, which allows navigation to view all courses and all instructors
 can navigate to all instructors view, and
@@ -27,8 +21,9 @@ can navigate to a single instructor view, and
 [x] see an informative message if no courses belong to that instructor
 [x] can navigate to single course view (see below)
 [x] delete the instructor 
-[] edit instructor information (including adding/removing courses)
-[] with a validated form displaying real-time error messages
+[x] edit instructor information 
+    - but without adding/removing courses at the moment 
+[x] with a validated form displaying real-time error messages
 
 can navigate to all courses view, and
 [x] see a list of all courses in the database
@@ -164,5 +159,11 @@ UI (React)
 
 
 
+To run the app without a database connection:
+
+```
+cd crudapp-frontend  
+npm install        
+npm start 
 
 
