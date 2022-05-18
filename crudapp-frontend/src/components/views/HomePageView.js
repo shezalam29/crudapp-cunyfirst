@@ -15,8 +15,9 @@ const HomePageView = () => {
             <img src="https://www.cuny.edu/wp-content/uploads/sites/4/media-assets/skyline-1200x627_CUNY_Logo.jpg"  style={{
               marginTop: "20px",
               height: "auto",
-              width:"1000px",
-              textAlign: "center",
+              width:"auto",
+              marginLeft: "auto"
+
             }}alt="cunylogo alt" />
 
       </div>

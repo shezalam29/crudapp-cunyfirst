@@ -7,6 +7,7 @@ const SingleCourseView = ({ course, deleteCourse }) => {
       <h1>Course Title: {course.title}</h1>
       <h2>Timeslot: {course.timeslot}</h2>
       <h2>Location: {course.location}</h2>
+      <p>Course Database ID: {course.id}</p>
       {course.instructor ? (
         <Link to={`/instructor/${course.instructor.id}`}>
           <h2>Instructor: {course.instructor.firstname} {course.instructor.lastname}</h2>

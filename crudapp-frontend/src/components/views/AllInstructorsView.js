@@ -15,17 +15,21 @@ const AllInstructorsView = ({ allInstructors, deleteInstructor }) => {
 
   return (
     <div>
-      <h2>Click the 'x' under an instructor to remove the instructor</h2>
+      <h1>Instructors</h1>
+      <h4>Click the 'x' under an instructor to delete the instructor</h4>
       {allInstructors.map((instructor) => (
       <div key={instructor.id}>
         <Link to={`/instructor/${instructor.id}`}>
-          <h1>{instructor.firstname} {instructor.lastname}</h1>
+          <h2>{instructor.firstname} {instructor.lastname}</h2>
         </Link>
-        <Button onClick={() => deleteInstructor(instructor.id)} >X</Button>
+        <p>Instructor Database ID: {instructor.id}</p>
+        <Button variant ="outlined" size="small" onClick={() => deleteInstructor(instructor.id)}>x</Button>
       </div>
       )
       )
       }
+      <br>
+      </br>
       <Link to={`/newinstructor`}>
           <Button> Add New Instructor </Button>
       </Link>  

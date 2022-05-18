@@ -9,11 +9,11 @@ import { Link } from 'react-router-dom';
 const useStyles = makeStyles(theme => ({
   pagetitle: {
     flexGrow: 1,
-    textAlign: 'center',
+    textAlign: 'left',
     fontType: 'bold',
     fontFamily: 'Trebuchet MS', 
     fontSize: '50px', 
-    color: 'black'
+    color: 'darkblue'
   },
   appBar:{
     backgroundColor: '#CBC3E3',
@@ -30,17 +30,17 @@ const Navbar = () => {
             CUNYFirst Course Planning
           </Typography>
           <Link to={'/'} >
-            <Button variant="contained" style={{marginRight: '10px'}}>
+            <Button variant="outlined" style={{marginRight: '10px'}}>
               Home
             </Button>
           </Link>
           <Link to={'/instructors'} >
-            <Button variant="contained" backgroundcolor="black" style={{marginRight: '10px'}}>
+            <Button variant="outlined" backgroundcolor="black" style={{marginRight: '10px'}}>
               Instructors
             </Button>
           </Link>
           <Link to={'/courses'} >
-            <Button variant="contained">
+            <Button variant="outlined">
               Courses
             </Button>
           </Link>

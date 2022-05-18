@@ -16,20 +16,24 @@ const AllCoursesView = ({allCourses, deleteCourse}) => {
 
   return (
     <div>
-      <h2>Click the 'x' under a course to remove the course</h2>
+      <h1>Courses</h1>
+      <h4>Click the 'x' under a course to delete the course</h4>
       {allCourses.map((course) => {
       let title = course.title;
       return (
         <div key={course.id}>
           <Link to={`/course/${course.id}`}>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
           </Link>
-          <Button onClick={() => deleteCourse(course.id)} >X</Button>
+          <p>Course Database ID: {course.id}</p>
+          <Button variant ="outlined" size="small" onClick={() => deleteCourse(course.id)}>x</Button>
         </div>
       );
       }
       )
       }
+      <br>
+      </br>
     <Link to={`/newcourse`}>
       <Button> Add New Course </Button>
     </Link>  
