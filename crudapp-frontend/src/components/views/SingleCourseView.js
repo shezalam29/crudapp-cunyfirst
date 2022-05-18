@@ -18,7 +18,7 @@ const SingleCourseView = ({ course, deleteCourse }) => {
         <Button>Edit Course</Button>
       </Link>
       <Link to="/courses" >
-        <Button onClick={() => deleteCourse(course.id)}>Delete</Button>
+        <Button onClick={() => deleteCourse(course.id)}>Delete Course</Button>
       </Link>
     </div>
   );

@@ -10,6 +10,7 @@ const EditCourseView = (props) => {
     return (
         <div>
         <h1>Edit Course</h1>
+        <h3>*Instructor ID must exist in database if filled in*</h3>
         <form onSubmit={(e) => handleSubmit(e)}>
         <TextField
               error={nameError}

@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import  EditInstructorView  from '../views/EditInstructorView';
-import { editInstructorThunk, getInstructorThunk, } from '../../store/actionsandthunks';
+import { editInstructorThunk, getInstructorThunk} from '../../store/actionsandthunks';
 
 class EditInstructorContainer extends Component {
     constructor(props){
@@ -77,6 +77,10 @@ class EditInstructorContainer extends Component {
             handleChange = {this.handleChange} 
             handleSubmit={this.handleSubmit}
             nameError={this.state.nameError}
+            removeCourse = {this.removeCourse}
+            addCourse = {this.addCourse}
+            allCourses = {this.allCourses}
+          
           />
         );
     }
@@ -85,13 +89,14 @@ class EditInstructorContainer extends Component {
 const mapState = (state) => {
   return {
     instructor: state.instructor,
+    allCourses: state.allCourses
   };
 };
 
 const mapDispatch = (dispatch) => {
     return({
       editInstructor: (instructor) => dispatch(editInstructorThunk(instructor)),
-      getInstructor: (instructor) => dispatch(getInstructorThunk(instructor)),
+      getInstructor: (id) => dispatch(getInstructorThunk(id)),
     })
 }
 

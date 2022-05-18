@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button, IconButton } from "@material-ui/core"
-import DeleteIcon from "@material-ui/icons/Delete";
+import { Button } from "@material-ui/core"
 
 const AllInstructorsView = ({ allInstructors, deleteInstructor }) => {
   if (!allInstructors.length) {
@@ -16,16 +15,13 @@ const AllInstructorsView = ({ allInstructors, deleteInstructor }) => {
 
   return (
     <div>
+      <h2>Click the 'x' under an instructor to remove the instructor</h2>
       {allInstructors.map((instructor) => (
       <div key={instructor.id}>
         <Link to={`/instructor/${instructor.id}`}>
           <h1>{instructor.firstname} {instructor.lastname}</h1>
         </Link>
-        <div onClick={() => deleteInstructor(instructor.id)}>
-          <IconButton>
-            <DeleteIcon />
-          </IconButton>
-        </div>
+        <Button onClick={() => deleteInstructor(instructor.id)} >X</Button>
       </div>
       )
       )

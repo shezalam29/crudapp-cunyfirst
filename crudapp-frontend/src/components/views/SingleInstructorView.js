@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom"
 
-const SingleInstructorView = ({ instructor, deleteInstructor, }) => {  
+const SingleInstructorView = (props) => {
+  const history = useHistory();
+  const {instructor, removeCourse, allCourses, deleteInstructor} = props;
   return (
     <div>      
       <h1>Instructor: {instructor.firstname} {instructor.lastname}</h1>
@@ -12,6 +15,7 @@ const SingleInstructorView = ({ instructor, deleteInstructor, }) => {
       ) : ( 
         <div>
         <h2>Courses:</h2>
+        <h3>Click the 'x' to unassign the course to this instructor</h3>
         <ul>
         {instructor.courses.map( course => {
           let title = course.title;
@@ -19,6 +23,7 @@ const SingleInstructorView = ({ instructor, deleteInstructor, }) => {
             <li key={course.id}>
               <Link to={`/course/${course.id}`}>{title}
               </Link>
+              <Button onClick = {()=> removeCourse(course.id)}>x</Button>
             </li>
           );
         }
@@ -28,11 +33,19 @@ const SingleInstructorView = ({ instructor, deleteInstructor, }) => {
         </div>
         )
       }
+        <br></br>
+        <div>
+          <Button onClick = {()=>{
+            history.push('/newcourse',{instructorId: instructor.id})
+          }}>Add new course</Button>
+        </div>
+        <br></br>
+
       <Link to= {`/editinstructor/` + instructor.id}>
         <Button>Edit Instructor</Button>
       </Link>
       <Link to="/instructors">
-        <Button onClick={() => deleteInstructor(instructor.id)}>Delete</Button>
+        <Button onClick={() => deleteInstructor(instructor.id)}>Delete Instructor</Button>
       </Link>
     </div>
   );

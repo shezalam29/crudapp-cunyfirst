@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { Button, IconButton} from "@material-ui/core"
-import DeleteIcon from "@material-ui/icons/Delete";
+import { Button } from "@material-ui/core"
+
 
 const AllCoursesView = ({allCourses, deleteCourse}) => {
   if (!allCourses.length) {
@@ -16,6 +16,7 @@ const AllCoursesView = ({allCourses, deleteCourse}) => {
 
   return (
     <div>
+      <h2>Click the 'x' under a course to remove the course</h2>
       {allCourses.map((course) => {
       let title = course.title;
       return (
@@ -23,11 +24,7 @@ const AllCoursesView = ({allCourses, deleteCourse}) => {
           <Link to={`/course/${course.id}`}>
             <h1>{title}</h1>
           </Link>
-          <div onClick={() => deleteCourse(course.id)}>
-            <IconButton>
-            <DeleteIcon />
-            </IconButton>
-          </div>
+          <Button onClick={() => deleteCourse(course.id)} >X</Button>
         </div>
       );
       }
