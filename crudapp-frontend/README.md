@@ -8,36 +8,35 @@ https://github.com/mtlynch3/CSCI39548
 https://github.com/mtlynch3/final-frontend
 
     
-As a user I:
--[x] will land on a visually pleasing homepage by default, which allows navigation to view all courses and all instructors
+As a user I: 
+- [x ] will land on a visually pleasing homepage by default, which allows navigation to view all courses and all instructors
 can navigate to all instructors view, and
--[x] see a list of all instructors in the database
--[x] see an informative message if no instructors exist
--[x] add a new instructor
--[x] with a validated form displaying real-time error messages
+- [x ] see a list of all instructors in the database
+- [x ] see an informative message if no instructors exist
+- [x ] add a new instructor
+- [x ] with a validated form displaying real-time error messages
 
 can navigate to a single instructor view, and
--[x] see details about a single instructor, including courses they teach (if any) 
--[x] see an informative message if no courses belong to that instructor
--[x] can navigate to single course view (see below)
--[x] delete the instructor 
--[x] edit instructor information 
-     but without adding/removing courses at the moment 
-[x] with a validated form displaying real-time error messages
+- [x ] see details about a single instructor, including courses they teach (if any) 
+- [x ] see an informative message if no courses belong to that instructor
+- [x ] can navigate to single course view (see below)
+- [x ] delete the instructor 
+- [x ] edit instructor information 
+    - [x ] with a validated form displaying real-time error messages
 
 can navigate to all courses view, and
--[x] see a list of all courses in the database
--[x] see an informative message if no courses exist
--[x] add a new course
--[x] with a validated form displaying real-time error messages
+- [x ] see a list of all courses in the database
+- [x ] see an informative message if no courses exist
+- [x ] add a new course
+    - [x ] with a validated form displaying real-time error messages
 
 can navigate to a single course view, and
--[x] see details about a single course, including the instructor
--[x] should display “Staff” if the course is not assigned an instructor
--[x] navigate to single instructor view of the course’s instructor
--[x] delete the course
--[x] edit the course’s information (including instructor )
--[x] with a validated form displaying real-time error messages
+- [x ] see details about a single course, including the instructor
+- [x ] should display “Staff” if the course is not assigned an instructor
+- [x ] navigate to single instructor view of the course’s instructor
+- [x ] delete the course
+- [x ] edit the course’s information (including instructor )
+- [x ] with a validated form displaying real-time error messages
 
 Technical breakdown of requirements:
 
