@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import { useHistory } from "react-router-dom"
 
 const SingleInstructorView = (props) => {
-  const history = useHistory();
-  const {instructor, removeCourse, allCourses, deleteInstructor, editCourse} = props;
+  const {instructor, allCourses, deleteInstructor, editCourse} = props;
   let assignedCourses = allCourses.filter(course => course.instructorId===instructor.id);
   let availableCourses = allCourses.filter(course => course.instructorId!==instructor.id);
 

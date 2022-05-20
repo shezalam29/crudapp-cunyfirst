@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getInstructorThunk, deleteInstructorThunk, editInstructorThunk, editCourseThunk, getAllCourseThunk, getAllCoursesThunk} from "../../store/actionsandthunks";
+import { getInstructorThunk, deleteInstructorThunk, editInstructorThunk, editCourseThunk, getAllCoursesThunk} from "../../store/actionsandthunks";
 import { SingleInstructorView } from "../views"
 
 class SingleInstructorContainer extends Component {
