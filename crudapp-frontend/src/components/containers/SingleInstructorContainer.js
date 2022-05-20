@@ -1,20 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getInstructorThunk, deleteInstructorThunk, editInstructorThunk, editCourseThunk} from "../../store/actionsandthunks";
+import { getInstructorThunk, deleteInstructorThunk, editInstructorThunk, editCourseThunk, getAllCourseThunk, getAllCoursesThunk} from "../../store/actionsandthunks";
 import { SingleInstructorView } from "../views"
 
 class SingleInstructorContainer extends Component {
   componentDidMount() {
     this.props.getInstructor(this.props.match.params.id);
-  }
-
-  removeCourse = async id => {
-    let course = {
-      id: id,
-      instructorId: null
-    }
-    this.props.editCourse(course);
-    this.props.getInstructor(this.props.match.params.id);
+    this.props.getCourses();
   }
 
   render() {
@@ -22,6 +14,7 @@ class SingleInstructorContainer extends Component {
         <SingleInstructorView
         instructor={this.props.instructor}
         removeCourse = {this.removeCourse}
+        editCourse={this.props.editCourse}
         allCourses = {this.props.allCourses}
         deleteInstructor={this.props.deleteInstructor}
         deleteCourse={this.props.deleteCourse}
@@ -44,6 +37,7 @@ const mapDispatch = (dispatch) => {
     deleteInstructor: (instructorId) => dispatch(deleteInstructorThunk(instructorId)),
     editInstructor: (instructor) => dispatch(editInstructorThunk(instructor)),
     editCourse: (course) => dispatch(editCourseThunk(course)),
+    getCourses: () => dispatch(getAllCoursesThunk()),
   };
 };
 
