@@ -7,7 +7,13 @@ Sources:
 https://github.com/mtlynch3/CSCI39548
 https://github.com/mtlynch3/final-frontend
 
-    
+To run the app without a database connection:
+
+```
+cd crudapp-frontend  
+npm install        
+npm start 
+
 As a user I: 
 - [x ] will land on a visually pleasing homepage by default, which allows navigation to view all courses and all instructors
 can navigate to all instructors view, and
@@ -156,11 +162,5 @@ UI (React)
 - [x ] Make a request that causes that course to be removed from database  
 - [x ] Remove the course from the list of courses without needing to refresh the page
 
-To run the app without a database connection:
-
-```
-cd crudapp-frontend  
-npm install        
-npm start 
 
 
